@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 const int N=5; // dimensione massima dell'array
 
@@ -25,23 +26,38 @@ int main(int argc, char** argv) {
     
     printf("Il valore MASSIMO e' %d.\n", max);
     printf("Il valore MINIMO e' %d.\n", min);
-    printf("Il valore MEDIO e' %f.\n", med);
+    printf("Il valore MEDIO e' %5.3f.\n", med);
     
     return (EXIT_SUCCESS);
 }
 
 int massimo(int valori[], int dimensione){
-    // TODO Implementare il corpo della funzione
-    return 0;
+    int r,i;
+    r=INT_MIN;
+    for(i=0;i<dimensione;i++){
+     if(valori[i]>r)
+        r=valori[i];
+        }
+    return r;
 }
 
 int minimo(int valori[], int dimensione){
-    // TODO Implementare il corpo della funzione
-    return 0;
+    int r,i;
+    r=INT_MAX;
+    for(i=0;i<dimensione;i++){
+     if(valori[i]<r)
+        r=valori[i];
+        }
+    return r;
 }
 
 float media(int valori[], int dimensione){
-    // TODO Implementare il corpo della funzione
-    return 0;
+    float r=0;
+    int i;
+    for(i=0;i<dimensione;i++){
+     r+=valori [i];
+     }
+     r/=dimensione;
+    return r;
 }
 
