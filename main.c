@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
     
     printf("Il valore MASSIMO e' %d.\n", max);
     printf("Il valore MINIMO e' %d.\n", min);
-    printf("Il valore MEDIO e' %5.3f.\n", med);
+    printf("Il valore MEDIO e' %f.\n", med);
     
     return (EXIT_SUCCESS);
 }
